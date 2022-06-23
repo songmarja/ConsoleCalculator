@@ -93,21 +93,26 @@
         }
         static double Divide(double num1, double num2)
         {
-            double quote = 0;
-            try
+            //double quote = 0;
+            if(num2 == 0)
             {
-                while (!double.TryParse(Console.ReadLine(), out num2))
-                {
-                    Console.WriteLine("Invalid number. Try again!");
-                    Console.Write("Number 2: ");
-                }
-                quote = Math.Round(((num1) / (num2)), 3);
+                Console.WriteLine("You have divided by zero (0). It does not work...!");
             }
-            catch(DivideByZeroException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            return quote;
+            //try
+            //{
+            //    while (!double.TryParse(Console.ReadLine(), out num2))                                                                                                                                                                                                   
+            //    {
+            //        Console.WriteLine("Invalid number. Try again!");
+            //        Console.Write("Number 2: ");
+            //    }
+            //quote = Math.Round(((num1) / (num2)), 3);
+            return Math.Round(((num1) / (num2)), 3);
+            //}
+            //catch(DivideByZeroException e)
+            //{
+            //    Console.WriteLine(e.Message);
+            ////}
+            //return quote;
         }
         static double Multiplicate(double num1, double num2)
         {
@@ -118,6 +123,10 @@
             throw new NotImplementedException();
         }
         private static void RootOf()
+        {
+            throw new NotImplementedException();
+        }
+        private static void Percent()
         {
             throw new NotImplementedException();
         }
